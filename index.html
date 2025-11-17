@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Học nhóm 2</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #dfe9f3, #ffffff);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Banner */
+        .banner {
+			width: 100%;
+			height: 330px;
+			background-image: url("https://static.ybox.vn/2023/11/4/1699538110346-19672351d371ad8cacdbb4def232aca4.jpg"); /* DÁN LINK ẢNH Ở ĐÂY */
+			background-size: cover;
+			background-position: center;
+			animation: bannerEnter 1.2s ease-out;
+}
+
+        @keyframes bannerEnter {
+            from { transform: scale(1.1); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Tiêu đề */
+        h2 {
+            text-align: center;
+            margin: 40px 0 10px 0;
+            font-size: 28px;
+            letter-spacing: 1px;
+            color: #333;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Danh sách */
+        .members, .lessons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 20px 40px;
+        }
+
+        /* Card */
+        .card {
+            width: 200px;
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: 0.3s ease-in-out;
+            animation: fadeCard 0.8s ease-out;
+        }
+
+        @keyframes fadeCard {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        h3 {
+            margin-top: 12px;
+            font-weight: 600;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Banner -->
+    <div class="banner"></div>
+
+    <!-- Thành viên -->
+    <h2>✨ Giới thiệu thành viên ✨</h2>
+
+    <div class="members">
+        <div class="card" onclick="location.href='thanhvien1.html'">
+            <img src="thanhvien1.jpg" alt="">
+            <h3>Thành viên 1</h3>
+        </div>
+
+        <div class="card" onclick="location.href='thanhvien2.html'">
+            <img src="thanhvien2.jpg" alt="">
+            <h3>Thành viên 2</h3>
+        </div>
+
+        <div class="card" onclick="location.href='thanhvien3.html'">
+            <img src="thanhvien3.jpg" alt="">
+            <h3>Thành viên 3</h3>
+        </div>
+
+        <div class="card" onclick="location.href='thanhvien4.html'">
+            <img src="thanhvien4.jpg" alt="">
+            <h3>Thành viên 4</h3>
+        </div>
+
+        <div class="card" onclick="location.href='thanhvien5.html'">
+            <img src="thanhvien5.jpg" alt="">
+            <h3>Thành viên 5</h3>
+        </div>
+    </div>
+
+    <!-- Bài học -->
+    <h2>📘 Danh sách bài học 📘</h2>
+
+    <div class="lessons">
+
+		<a href="https://www.canva.com/design/DAG46v0RKGQ/tAeFDjjk-isrha8G9a8S-g/edit?utm_content=DAG46v0RKGQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="card">
+			<h3>Bài học 8</h3>
+		</a>
+
+		<a href="https://www.canva.com/design/DAG47OSZ0bw/zbXpq9cTSGlu8npKBNaAdw/edit?utm_content=DAG47OSZ0bw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="card">
+			<h3>Bài học 9</h3>
+		</a>
+
+		<a href="https://example.com/baihoc3" class="card">
+			<h3>Bài học 10</h3>
+		</a>
+
+		<a href="https://example.com/baihoc4" class="card">
+			<h3>Bài học 11</h3>
+		</a>
+
+		<a href="https://example.com/baihoc5" class="card">
+			<h3>Bài học 12</h3>
+		</a>
+
+	</div>
+
+</body>
+</html>
