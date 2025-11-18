@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thành viên 1</title>
 
-    <style>
+   <style>
         body {
             font-family: Poppins, sans-serif;
             background: linear-gradient(to bottom, #e3f2fd, #ffffff);
             padding: 40px;
             animation: fade 1s;
         }
+
         @keyframes fade { 
             from {opacity: 0;} 
             to {opacity: 1;} 
@@ -36,16 +37,37 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
-        a {
+        h1, h2, p {
+            color: #333;
+        }
+
+        .button-link {
             display: inline-block;
             margin-top: 25px;
-            text-decoration: none;
+            padding: 12px 25px;
             font-size: 18px;
-            color: #0077ff;
+            color: #fff;
+            background-color: #0077ff;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             transition: 0.3s;
         }
 
-        a:hover {
+        .button-link:hover {
+            background-color: #ff6600;
+        }
+
+        .back-link {
+            margin-top: 20px;
+            display: block;
+            font-size: 16px;
+            color: #0077ff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
             color: #ff6600;
         }
     </style>
@@ -67,3 +89,4 @@
 </body>
 
 </html>
+
