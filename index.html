@@ -3,311 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tin Học nhóm 2</title>
+    <title>Nhóm Dễ Thương Nhẹ Nhàng</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
-        }
-
         body {
-            background: linear-gradient(to bottom, #dfe9f3, #ffffff);
-            animation: fadeIn 1s ease-in-out;
+            margin: 0;
+            font-family: "Nunito", sans-serif;
+            background: #f7f9f9;
+            color: #4a4a4a;
+            overflow-x: hidden;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Banner */
+        /* HEADER */
         .banner {
-			width: 100%;
-			height: 330px;
-			background-image: url("https://static.ybox.vn/2023/11/4/1699538110346-19672351d371ad8cacdbb4def232aca4.jpg"); /* DÁN LINK ẢNH Ở ĐÂY */
-			background-size: cover;
-			background-position: center;
-			animation: bannerEnter 1.2s ease-out;
-}
-
-        @keyframes bannerEnter {
-            from { transform: scale(1.1); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
+            width: 100%;
+            height: 260px;
+            background-image: url("https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABayGFaUS4IQI9ipoyQcI5YyRkLvfkARCD258E3WpqKhVRNvTHnNAQ_Fae715fVeKE6CtfD4KunUjrsPKm2epnn3VXl073E7GVz00.jpg?r=904");
+            background-size: cover;
+            background-position: center;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
         }
 
-        /* Tiêu đề */
+        /* ANIMATION SETUP */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 0.8s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         h2 {
             text-align: center;
-            margin: 40px 0 10px 0;
-            font-size: 28px;
-            letter-spacing: 1px;
-            color: #333;
-            animation: slideUp 0.8s ease-out;
+            margin-top: 40px;
+            color: #5a7d7c;
+            font-size: 30px;
+            font-weight: 700;
         }
 
-        @keyframes slideUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        /* Danh sách */
-        .members, .lessons {
+        /* TEAM CARDS */
+        .team {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 25px;
-            padding: 20px 40px;
+            max-width: 1100px;
+            margin: 30px auto;
         }
 
-        /* Card */
-        .card {
-            width: 200px;
-            background: white;
-            border-radius: 15px;
-            padding: 15px;
+        .member {
+            width: 220px;
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 18px;
             text-align: center;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            transition: 0.3s ease-in-out;
-            animation: fadeCard 0.8s ease-out;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: 0.3s;
+            border: 1px solid #e4ebe8;
         }
 
-        @keyframes fadeCard {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .member:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
         }
 
-        .card:hover {
-            transform: translateY(-8px) scale(1.05);
-            box-shadow: 0 8px 22px rgba(0,0,0,0.25);
-        }
-
-        .card img {
+        .member img {
             width: 100%;
-            border-radius: 12px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
         }
 
-        h3 {
+        .member p {
             margin-top: 12px;
+            font-size: 19px;
+            color: #5a7d7c;
+            font-weight: 700;
+        }
+
+        /* LESSON LIST */
+        .lessons {
+            max-width: 650px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            border: 1px solid #e4ebe8;
+        }
+
+        .lessons a {
+            display: block;
+            padding: 12px;
+            background: #e7f3f1;
+            border-radius: 12px;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #4b6f6d;
+            font-size: 18px;
             font-weight: 600;
-            color: #333;
+            transition: 0.25s;
+        }
+
+        .lessons a:hover {
+            background: #d9ecea;
+            transform: translateX(10px);
+        }
+
+        /* FORM */
+        .form-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            border: 1px solid #e4ebe8;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 14px;
+            margin: 12px 0;
+            border-radius: 12px;
+            border: 2px solid #dce7e5;
+            background: #f9fdfd;
+            font-size: 16px;
+        }
+
+        button {
+            background: #8ab6b3;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            margin-top: 10px;
+            font-weight: 700;
+            transition: 0.25s;
+        }
+
+        button:hover {
+            background: #769f9c;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background: #e7f2f1;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            color: #5a7d7c;
+            font-weight: 600;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Banner -->
-    <div class="banner"></div>
+<!-- BANNER -->
+<div class="banner reveal"></div>
 
-    <!-- Thành viên -->
-    <h2>✨ Giới thiệu thành viên ✨</h2>
+<!-- TEAM -->
+<h2 class="reveal">🌿 Thành viên nhóm</h2>
 
-    <div class="members">
-        <div class="card" onclick="location.href='thanhvien1.html'">
-            <img src="thanhvien1.jpg" alt="">
-            <h3>Thành viên 1</h3>
-        </div>
-
-        <div class="card" onclick="location.href='thanhvien2.html'">
-            <img src="thanhvien2.jpg" alt="">
-            <h3>Thành viên 2</h3>
-        </div>
-
-        <div class="card" onclick="location.href='thanhvien3.html'">
-            <img src="thanhvien3.jpg" alt="">
-            <h3>Thành viên 3</h3>
-        </div>
-
-        <div class="card" onclick="location.href='thanhvien4.html'">
-            <img src="thanhvien4.jpg" alt="">
-            <h3>Thành viên 4</h3>
-        </div>
-
-        <div class="card" onclick="location.href='thanhvien5.html'">
-            <img src="thanhvien5.jpg" alt="">
-            <h3>Thành viên 5</h3>
-        </div>
+<div class="team reveal">
+    <div class="member" onclick="location.href='thanhvien1.html'">
+        <img src="thanhvien1.jpg">
+        <p>Thanh Hậu</p>
     </div>
 
-    <!-- Bài học -->
-    <h2>📘 Danh sách bài học 📘</h2>
+    <div class="member" onclick="location.href='thanhvien2.html'">
+        <img src="thanhvien2.jpg">
+        <p>Khánh Vân</p>
+    </div>
+
+    <div class="member" onclick="location.href='thanhvien3.html'">
+        <img src="thanhvien3.jpg">
+        <p>Mỹ Ngọc</p>
+    </div>
+
+    <div class="member" onclick="location.href='thanhvien4.html'">
+        <img src="thanhvien4.jpg">
+        <p>Ngọc Trân</p>
+    </div>
+
+    <div class="member" onclick="location.href='thanhvien5.html'">
+        <img src="thanhvien5.jpg">
+        <p>Thiên Phú</p>
+    </div>
+</div>
+
+<!-- LESSONS -->
+<h2>📘 Danh sách bài học 📘</h2>
 
     <div class="lessons">
 
 		<a href="https://www.canva.com/design/DAG46v0RKGQ/tAeFDjjk-isrha8G9a8S-g/edit?utm_content=DAG46v0RKGQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="card">
 			<h3>Bài học 8</h3>
 		</a>
-
 		<a href="https://www.canva.com/design/DAG47OSZ0bw/zbXpq9cTSGlu8npKBNaAdw/edit?utm_content=DAG47OSZ0bw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="card">
 			<h3>Bài học 9</h3>
 		</a>
-
 		<a href="https://www.canva.com/design/DAG49_jETwQ/b9DkS1UAzdvgnH4VgKjKzw/edit?utm_content=DAG49_jETwQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="card">
 			<h3>Bài học 10</h3>
 		</a>
-
 		<a href="https://example.com/baihoc4" class="card">
 			<h3>Bài học 11</h3>
 		</a>
-
 		<a href="https://example.com/baihoc5" class="card">
 			<h3>Bài học 12</h3>
 		</a>
-
 	</div>
-<style>
-    .contact-box {
-        max-width: 520px;
-        margin: 40px auto;
-        padding: 35px;
-        background: #ffffffdd;
-        backdrop-filter: blur(8px);
-        border-radius: 18px;
-        box-shadow: 0 10px 35px rgba(0,0,0,0.18);
-        font-family: "Segoe UI", Arial, sans-serif;
-    }
-    .contact-title {
-        text-align: center;
-        font-size: 26px;
-        font-weight: 700;
-        color: #2d3436;
-        margin-bottom: 20px;
-    }
-    .contact-box label {
-        font-weight: 600;
-        color: #2d3436;
-    }
-    .contact-box input,
-    .contact-box select,
-    .contact-box textarea {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        margin-top: 6px;
-        margin-bottom: 18px;
-        font-size: 15px;
-        transition: 0.25s;
-    }
-    .contact-box input:focus,
-    .contact-box textarea:focus,
-    .contact-box select:focus {
-        border-color: #6c5ce7;
-        box-shadow: 0 0 8px rgba(108,92,231,.3);
-    }
-    .birth-row {
-        display: flex;
-        gap: 10px;
-    }
-    .send-btn {
-        width: 100%;
-        padding: 14px;
-        background: linear-gradient(135deg, #6c5ce7, #a55eea);
-        color: white;
-        font-size: 17px;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: .25s;
-    }
-    .send-btn:hover {
-        background: linear-gradient(135deg, #4b2dd3, #8250d6);
-        transform: translateY(-2px);
-    }
 
-    /* Thông báo cảm ơn */
-    .thankyou-box {
-        margin-top: 20px;
-        padding: 15px;
-        background: #dfe6ff;
-        border-left: 5px solid #6c5ce7;
-        border-radius: 10px;
-        font-weight: 600;
-        color: #2d3436;
-        display: none;
-        animation: fadeIn 0.6s ease;
-    }
+<!-- FORM -->
+<h2 class="reveal">📩 Gửi lời nhắn</h2>
 
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to   { opacity: 1; transform: translateY(0); }
-    }
-</style>
-
-<div class="contact-box">
-    <div class="contact-title">Điền Thông Tin</div>
-
-    <form id="contactForm">
-        <label>Email của bạn (người gửi)</label>
-        <input type="email" name="sender_email" placeholder="Nhập email của bạn" required>
-
-        <label>Họ và Tên</label>
-        <input type="text" name="name" placeholder="Nhập họ và tên" required>
-
-        <label>Ngày Sinh</label>
-        <div class="birth-row">
-            <select name="day" required>
-                <option value="">Ngày</option>
-                <script>
-                    for (let i=1;i<=31;i++) document.write(`<option>${i}</option>`);
-                </script>
-            </select>
-
-            <select name="month" required>
-                <option value="">Tháng</option>
-                <script>
-                    for (let i=1;i<=12;i++) document.write(`<option>${i}</option>`);
-                </script>
-            </select>
-
-            <select name="year" required>
-                <option value="">Năm</option>
-                <script>
-                    for (let i=2025;i>=1950;i--) document.write(`<option>${i}</option>`);
-                </script>
-            </select>
-        </div>
-
-        <label>Nội dung</label>
-        <textarea name="content" placeholder="Nhập nội dung..." required></textarea>
-
-        <input type="hidden" name="_subject" value="Có người gửi form cho bạn!">
-
-        <button class="send-btn" type="submit">Gửi Thông Tin</button>
+<div class="form-container reveal">
+    <form>
+        <input type="text" placeholder="Tên của bạn" required>
+        <input type="email" placeholder="Email của bạn" required>
+        <textarea rows="4" placeholder="Lời nhắn"></textarea>
+        <button type="submit">Gửi</button>
     </form>
-
-    <div id="thankyou" class="thankyou-box">
-        ✔ Cảm ơn ý kiến của bạn! Chúng tôi đã nhận được thông tin.
-    </div>
 </div>
 
+<footer class="reveal">© 2025 - Trang Nhóm 2 Tin Học 2025 🌿</footer>
+
+<!-- SCROLL REVEAL SCRIPT -->
 <script>
-    const form = document.getElementById("contactForm");
-    const thankyou = document.getElementById("thankyou");
+    function revealOnScroll() {
+        const reveals = document.querySelectorAll(".reveal");
 
-    form.addEventListener("submit", async function(e) {
-        e.preventDefault();
+        reveals.forEach(el => {
+            let rect = el.getBoundingClientRect();
+            let windowHeight = window.innerHeight;
 
-        const formData = new FormData(form);
-
-        // Gửi tới Formspree
-        await fetch("https://formspree.io/f/mwkgnjrn", {
-            method: "POST",
-            body: formData,
-            headers: { "Accept": "application/json" }
+            if (rect.top < windowHeight - 50) {
+                el.classList.add("show");
+            }
         });
+    }
 
-        form.reset();
-        thankyou.style.display = "block";
-    });
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
 </script>
-</div>
+
 </body>
 </html>
+
+
 
 
 
