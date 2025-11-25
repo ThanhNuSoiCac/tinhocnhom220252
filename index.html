@@ -160,103 +160,111 @@
 
 	</div>
 <style>
-    .form-section {
-        background: #ffffff;
-        padding: 25px;
-        max-width: 450px;
+    .contact-box {
+        max-width: 520px;
         margin: 40px auto;
-        border-radius: 12px;
-        box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-        font-family: Arial, sans-serif;
+        padding: 35px;
+        background: #ffffffdd;
+        backdrop-filter: blur(8px);
+        border-radius: 18px;
+        box-shadow: 0 10px 35px rgba(0,0,0,0.18);
+        font-family: "Segoe UI", Arial, sans-serif;
     }
-
-    .form-section h3 {
-        margin-top: 0;
+    .contact-title {
         text-align: center;
+        font-size: 26px;
+        font-weight: 700;
         color: #2d3436;
         margin-bottom: 20px;
     }
-
-    .form-section label {
-        font-weight: bold;
+    .contact-box label {
+        font-weight: 600;
         color: #2d3436;
     }
-
-    .form-section input,
-    .form-section textarea,
-    .form-section select {
-        width: 100%;
-        padding: 10px;
-        margin: 8px 0 15px 0;
-        border: 1px solid #dfe6e9;
-        border-radius: 6px;
-        font-size: 14px;
-    }
-
-    .form-section textarea {
-        resize: none;
-        height: 90px;
-    }
-
-    .form-section button {
+    .contact-box input,
+    .contact-box select,
+    .contact-box textarea {
         width: 100%;
         padding: 12px;
-        background: #6c5ce7;
-        border: none;
-        color: white;
-        font-size: 16px;
-        border-radius: 6px;
-        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        margin-top: 6px;
+        margin-bottom: 18px;
+        font-size: 15px;
         transition: 0.25s;
     }
-
-    .form-section button:hover {
-        background: #4b2dd3;
+    .contact-box input:focus,
+    .contact-box textarea:focus,
+    .contact-box select:focus {
+        border-color: #6c5ce7;
+        box-shadow: 0 0 8px rgba(108,92,231,.3);
     }
-
     .birth-row {
         display: flex;
         gap: 10px;
     }
+    .send-btn {
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(135deg, #6c5ce7, #a55eea);
+        color: white;
+        font-size: 17px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .25s;
+    }
+    .send-btn:hover {
+        background: linear-gradient(135deg, #4b2dd3, #8250d6);
+        transform: translateY(-2px);
+    }
 </style>
 
-<div class="form-section">
-    <h3>Điền Thông Tin Cá Nhân</h3>
+<div class="contact-box">
+    <div class="contact-title">Điền Thông Tin</div>
 
-    <label>Họ và Tên</label>
-    <input type="text" placeholder="Nhập tên của bạn">
+    <!-- Formspree gửi trực tiếp đến email của bạn -->
+    <form action="https://formspree.io/f/mwkgnjrn" method="POST">
 
-    <label>Ngày Sinh</label>
-    <div class="birth-row">
-        <select>
-            <option>Ngày</option>
-            <script>
-                for (let i = 1; i <= 31; i++) document.write(`<option>${i}</option>`);
-            </script>
-        </select>
+        <label>Email của bạn (người gửi)</label>
+        <input type="email" name="sender_email" placeholder="Nhập email của bạn" required>
 
-        <select>
-            <option>Tháng</option>
-            <script>
-                for (let i = 1; i <= 12; i++) document.write(`<option>${i}</option>`);
-            </script>
-        </select>
+        <label>Họ và Tên</label>
+        <input type="text" name="name" placeholder="Nhập họ và tên" required>
 
-        <select>
-            <option>Năm</option>
-            <script>
-                for (let i = 2025; i >= 1950; i--) document.write(`<option>${i}</option>`);
-            </script>
-        </select>
-    </div>
+        <label>Ngày Sinh</label>
+        <div class="birth-row">
+            <select name="day" required>
+                <option value="">Ngày</option>
+                <script>
+                    for (let i=1;i<=31;i++) document.write(`<option>${i}</option>`);
+                </script>
+            </select>
 
-    <label>Nội dung</label>
-    <textarea placeholder="Nhập nội dung..."></textarea>
+            <select name="month" required>
+                <option value="">Tháng</option>
+                <script>
+                    for (let i=1;i<=12;i++) document.write(`<option>${i}</option>`);
+                </script>
+            </select>
 
-    <button>Gửi Thông Tin</button>
+            <select name="year" required>
+                <option value="">Năm</option>
+                <script>
+                    for (let i=2025;i>=1950;i--) document.write(`<option>${i}</option>`);
+                </script>
+            </select>
+        </div>
+
+        <label>Nội dung</label>
+        <textarea name="content" placeholder="Nhập nội dung..." required></textarea>
+
+        <input type="hidden" name="_subject" value="Có người gửi form cho bạn!">
+
+        <button class="send-btn" type="submit">Gửi Thông Tin</button>
+    </form>
 </div>
-
 </body>
-
 </html>
+
 
