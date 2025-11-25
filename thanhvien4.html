@@ -1,91 +1,162 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thành viên 1</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Giới thiệu Thành Viên</title>
 
-    <style>
-        body {
-            font-family: Poppins, sans-serif;
-            background: linear-gradient(to bottom, #e3f2fd, #ffffff);
-            padding: 40px;
-            animation: fade 1s;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-        @keyframes fade { 
-            from {opacity: 0;} 
-            to {opacity: 1;} 
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: "Nunito", sans-serif;
+        background: #eef5f4;
+        overflow-x: hidden;
+    }
 
-        .card {
-            max-width: 600px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            text-align: center;
-        }
+    /* 🌸 FLOWER PETALS */
+    .petal {
+        position: fixed;
+        top: -20px;
+        font-size: 22px;
+        pointer-events: none;
+        opacity: 0.85;
+        z-index: 1;
+        animation: fall linear forwards;
+        filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
+    }
 
-        img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
+    @keyframes fall {
+        0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+        100% { transform: translateY(120vh) rotate(350deg); opacity: 0; }
+    }
 
-        h1, h2, p {
-            color: #333;
-        }
+    /* 🌿 CARD */
+    .card {
+        position: relative;
+        z-index: 10;
+        max-width: 550px;
+        margin: 50px auto;
+        background: #ffffff;
+        padding: 35px;
+        border-radius: 30px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        text-align: center;
+        border: 1px solid #dce7e5;
+        animation: fadeIn 0.8s ease-out;
+    }
 
-        .button-link {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 12px 25px;
-            font-size: 18px;
-            color: #fff;
-            background-color: #0077ff;
-            border-radius: 8px;
-            text-decoration: none;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: 0.3s;
-        }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
 
-        .button-link:hover {
-            background-color: #ff6600;
-        }
+    .card img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 22px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    }
 
-        .back-link {
-            margin-top: 20px;
-            display: block;
-            font-size: 16px;
-            color: #0077ff;
-            text-decoration: none;
-            transition: 0.3s;
-        }
+    h2 {
+        color: #4e6f6c;
+        margin-top: 25px;
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
 
-        .back-link:hover {
-            color: #ff6600;
-        }
-    </style>
+    p {
+        font-size: 19px;
+        color: #5a7d7c;
+        margin: 8px 0;
+        font-weight: 600;
+    }
+
+    /* 🌱 Social Buttons */
+    .social a {
+        display: inline-block;
+        margin: 10px 8px;
+        padding: 10px 16px;
+        background: #e7f3f1;
+        border-radius: 14px;
+        text-decoration: none;
+        color: #4e6f6c;
+        font-weight: 600;
+        transition: 0.25s;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+
+    .social a:hover {
+        background: #d8eae8;
+        transform: translateY(-3px);
+    }
+
+    /* 🏠 Back Button */
+    a.button {
+        display: block;
+        background: #8ab6b3;
+        color: white;
+        padding: 15px;
+        border-radius: 15px;
+        text-decoration: none;
+        margin-top: 30px;
+        font-size: 19px;
+        font-weight: 700;
+        transition: 0.3s;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    a.button:hover {
+        background: #7aa7a4;
+        transform: translateY(-3px);
+    }
+</style>
 </head>
+
 <body>
 
-<div class="card">
-    <img src="https://haycafe.vn/wp-content/uploads/2022/04/Anh-meo-bua-buon-cuoi.jpg" alt="Thành viên 1">
+<!-- 🌸 FLOWER PETALS SCRIPT -->
+<script>
+    function createPetal() {
+        const petal = document.createElement("div");
+        petal.classList.add("petal");
+        petal.textContent = "🌸";
 
-    <h1>Thành viên 4</h1>
-		<h2>Trần Ngọc Trân</h2>
-			<p>Giới thiệu.</p>  
-				<p>Lớp 12SĐ THPT Chuyên Bến Tre</p>
-					<p>Vai trò: Soạn Nội Dung<p>
-	<a href="https://www.facebook.com/entieeeeee/" class="button-link" target="_blank">Truy cập trang cá nhân</a>
-    <a href="index.html">⬅ Quay lại trang chính</a>
+        petal.style.left = Math.random() * 100 + "vw";
+        petal.style.animationDuration = (5 + Math.random() * 4) + "s";
+
+        document.body.appendChild(petal);
+
+        setTimeout(() => {
+            petal.remove();
+        }, 9000);
+    }
+
+    setInterval(createPetal, 280);
+</script>
+
+<div class="card">
+
+    <img src="https://haycafe.vn/wp-content/uploads/2022/04/Anh-meo-bua-buon-cuoi.jpg" alt="Ảnh thành viên">
+
+    <h2>Trần Ngọc Trân</h2>
+
+    <p>🎓 Trường: THPT Chuyên Bến Tre</p>
+    <p>📚 Lớp: 12SĐ</p>
+    <p>⭐ Vai trò: Nội dung</p>
+
+    <div class="social">
+        <a href="https://www.facebook.com/entieeeeee" target="_blank">Facebook</a>
+    </div>
+
+    <a href="index.html" class="button">⬅ Quay về trang chủ</a>
+
 </div>
 
-
 </body>
+</html>
+
+
 
