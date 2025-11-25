@@ -218,14 +218,30 @@
         background: linear-gradient(135deg, #4b2dd3, #8250d6);
         transform: translateY(-2px);
     }
+
+    /* Thông báo cảm ơn */
+    .thankyou-box {
+        margin-top: 20px;
+        padding: 15px;
+        background: #dfe6ff;
+        border-left: 5px solid #6c5ce7;
+        border-radius: 10px;
+        font-weight: 600;
+        color: #2d3436;
+        display: none;
+        animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
 </style>
 
 <div class="contact-box">
     <div class="contact-title">Điền Thông Tin</div>
 
-    <!-- Formspree gửi trực tiếp đến email của bạn -->
-    <form action="https://formspree.io/f/mwkgnjrn" method="POST">
-
+    <form id="contactForm">
         <label>Email của bạn (người gửi)</label>
         <input type="email" name="sender_email" placeholder="Nhập email của bạn" required>
 
@@ -263,8 +279,35 @@
 
         <button class="send-btn" type="submit">Gửi Thông Tin</button>
     </form>
+
+    <div id="thankyou" class="thankyou-box">
+        ✔ Cảm ơn ý kiến của bạn! Chúng tôi đã nhận được thông tin.
+    </div>
+</div>
+
+<script>
+    const form = document.getElementById("contactForm");
+    const thankyou = document.getElementById("thankyou");
+
+    form.addEventListener("submit", async function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        // Gửi tới Formspree
+        await fetch("https://formspree.io/f/mwkgnjrn", {
+            method: "POST",
+            body: formData,
+            headers: { "Accept": "application/json" }
+        });
+
+        form.reset();
+        thankyou.style.display = "block";
+    });
+</script>
 </div>
 </body>
 </html>
+
 
 
