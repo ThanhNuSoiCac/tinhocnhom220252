@@ -159,7 +159,104 @@
 		</a>
 
 	</div>
+<style>
+    .form-section {
+        background: #ffffff;
+        padding: 25px;
+        max-width: 450px;
+        margin: 40px auto;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+        font-family: Arial, sans-serif;
+    }
+
+    .form-section h3 {
+        margin-top: 0;
+        text-align: center;
+        color: #2d3436;
+        margin-bottom: 20px;
+    }
+
+    .form-section label {
+        font-weight: bold;
+        color: #2d3436;
+    }
+
+    .form-section input,
+    .form-section textarea,
+    .form-section select {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0 15px 0;
+        border: 1px solid #dfe6e9;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    .form-section textarea {
+        resize: none;
+        height: 90px;
+    }
+
+    .form-section button {
+        width: 100%;
+        padding: 12px;
+        background: #6c5ce7;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.25s;
+    }
+
+    .form-section button:hover {
+        background: #4b2dd3;
+    }
+
+    .birth-row {
+        display: flex;
+        gap: 10px;
+    }
+</style>
+
+<div class="form-section">
+    <h3>Điền Thông Tin Cá Nhân</h3>
+
+    <label>Họ và Tên</label>
+    <input type="text" placeholder="Nhập tên của bạn">
+
+    <label>Ngày Sinh</label>
+    <div class="birth-row">
+        <select>
+            <option>Ngày</option>
+            <script>
+                for (let i = 1; i <= 31; i++) document.write(`<option>${i}</option>`);
+            </script>
+        </select>
+
+        <select>
+            <option>Tháng</option>
+            <script>
+                for (let i = 1; i <= 12; i++) document.write(`<option>${i}</option>`);
+            </script>
+        </select>
+
+        <select>
+            <option>Năm</option>
+            <script>
+                for (let i = 2025; i >= 1950; i--) document.write(`<option>${i}</option>`);
+            </script>
+        </select>
+    </div>
+
+    <label>Nội dung</label>
+    <textarea placeholder="Nhập nội dung..."></textarea>
+
+    <button>Gửi Thông Tin</button>
+</div>
 
 </body>
 
 </html>
+
