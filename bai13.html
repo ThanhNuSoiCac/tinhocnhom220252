@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khái Niệm và Vai Trò của CSS</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+        h3 {
+            color: #4CAF50;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        .card {
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        .card h4 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .back-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Khái Niệm và Vai Trò của CSS</h1>
+    </header>
+
+    <div class="container">
+        <h2>1. Khái Niệm về CSS</h2>
+        <p>CSS (Cascading Style Sheets) là một ngôn ngữ thiết kế được sử dụng để mô tả cách thức hiển thị các yếu tố HTML trên trang web. CSS cho phép lập trình viên định nghĩa màu sắc, font chữ, khoảng cách, bố cục, và rất nhiều thuộc tính khác để điều khiển giao diện của trang web.</p>
+        
+        <div class="card">
+            <h4>Ví dụ về CSS</h4>
+            <p>Đoạn mã sau sử dụng CSS để thay đổi màu nền và font chữ của một đoạn văn bản:</p>
+            <pre><code>
+p {
+    color: blue;
+    background-color: yellow;
+    font-size: 20px;
+}
+            </code></pre>
+        </div>
+
+        <h2>2. Vai Trò của CSS</h2>
+        <p>CSS đóng vai trò rất quan trọng trong việc tạo ra một trải nghiệm người dùng hấp dẫn và dễ sử dụng. Dưới đây là các vai trò chính của CSS:</p>
+
+        <ul>
+            <li><strong>Cải thiện giao diện người dùng:</strong> CSS giúp tạo ra giao diện trực quan và đẹp mắt, từ việc điều chỉnh màu sắc, font chữ đến các hiệu ứng chuyển động.</li>
+            <li><strong>Thay đổi bố cục trang web:</strong> CSS cho phép chúng ta dễ dàng sắp xếp các phần tử trên trang, chẳng hạn như bố cục một cột, hai cột, hay thậm chí bố cục lưới (grid layout).</li>
+            <li><strong>Tăng tốc độ tải trang:</strong> Với CSS, bạn có thể tối ưu hóa giao diện mà không cần phải thay đổi nội dung HTML, điều này giúp giảm tải trang web và cải thiện hiệu suất.</li>
+            <li><strong>Tính tương thích và khả năng phản hồi:</strong> CSS giúp trang web hiển thị tốt trên nhiều loại thiết bị, từ máy tính để bàn, điện thoại di động đến máy tính bảng.</li>
+            <li><strong>Giảm thiểu mã HTML:</strong> CSS cho phép bạn tách biệt phần giao diện và cấu trúc của trang web, giúp mã HTML trở nên ngắn gọn và dễ hiểu hơn.</li>
+        </ul>
+
+        <div class="card">
+            <h4>Ví dụ về vai trò của CSS trong bố cục:</h4>
+            <pre><code>
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+            </code></pre>
+        </div>
+
+        <h2>3. Tại Sao CSS Quan Trọng?</h2>
+        <p>CSS là một phần không thể thiếu trong quá trình phát triển web hiện đại. Nếu không có CSS, tất cả các trang web sẽ chỉ đơn giản là các đoạn văn bản xếp chồng lên nhau mà không có bất kỳ kiểu dáng hay định dạng nào. Nó giúp trang web trở nên dễ nhìn, dễ tương tác và thân thiện với người dùng.</p>
+    </div>
+
+    <div style="text-align: center;">
+        <button class="back-button" onclick="window.location.href='index.html';">Quay lại Trang Chủ</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Nhóm2</p>
+    </footer>
+
+</body>
+</html>
+
+</html>
