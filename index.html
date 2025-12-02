@@ -34,7 +34,7 @@
         pointer-events: none;
         animation: fall linear forwards;
         opacity: 0.9;
-        z-index: 1; /* luôn nằm sau chữ */
+        z-index: 1; /* always behind text */
     }
 
     @keyframes fall {
@@ -55,6 +55,34 @@
         z-index: 5;
     }
 
+    .banner-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Quicksand', sans-serif;
+        font-size: 60px;
+        font-weight: 700;
+        color: #F37021;
+        background: rgba(255, 255, 255, 0.25);
+        padding: 12px 30px;
+        border-radius: 10px;
+        backdrop-filter: blur(2px);
+        letter-spacing: 3px;
+        animation: neon 2s infinite alternate, bounce 1.2s ease-in-out infinite;
+    }
+
+    @keyframes neon {
+        0% { text-shadow: 0 0 5px #fff, 0 0 10px #f37021, 0 0 20px #f37021; }
+        50% { text-shadow: 0 0 10px #fff, 0 0 20px #ff9933, 0 0 30px #f37021; }
+        100% { text-shadow: 0 0 5px #fff, 0 0 10px #ff6600, 0 0 20px #f37021; }
+    }
+
+    @keyframes bounce {
+        0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+        50% { transform: translate(-50%, -50%) translateY(-10px); }
+    }
+
     /* HEADINGS */
     h2 {
         text-align: center;
@@ -65,26 +93,7 @@
         position: relative;
         z-index: 10;
     }
-.banner-title{
-          position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-          font-family:'Quicksand',sans-serif;font-size:60px;font-weight:700;
-          color:#F37021;background:rgba(255,255,255,0.25);
-          padding:12px 30px;border-radius:10px;backdrop-filter:blur(2px);letter-spacing:3px;
-          animation: neon 2s infinite alternate, bounce 1.2s ease-in-out infinite;
-        }
-        @keyframes neon{
-          0%{text-shadow:0 0 5px #fff,0 0 10px #f37021,0 0 20px #f37021;}
-          50%{text-shadow:0 0 10px #fff,0 0 20px #ff9933,0 0 30px #f37021;}
-          100%{text-shadow:0 0 5px #fff,0 0 10px #ff6600,0 0 20px #f37021;}
-        }
-        @keyframes bounce{
-          0%,100%{transform:translate(-50%,-50%) translateY(0);}
-          50%{transform:translate(-50%,-50%) translateY(-10px);}
-        }
-<!-- Banner -->
-<div class="banner">
-    <div class="banner-title">Nhóm 2 Không Ai Làm Lại</div>
-</div>
+
     /* TEAM */
     .team {
         display: flex;
@@ -104,20 +113,23 @@
         padding: 18px;
         text-align: center;
         cursor: pointer;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
         transition: 0.3s;
         border: 1px solid #e4ebe8;
     }
+
     .member:hover {
         transform: translateY(-8px);
-        box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
     }
+
     .member img {
         width: 100%;
         height: 200px;
         object-fit: cover;
         border-radius: 15px;
     }
+
     .member p {
         margin-top: 12px;
         font-size: 19px;
@@ -132,7 +144,7 @@
         background: #ffffff;
         padding: 25px;
         border-radius: 20px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
         border: 1px solid #e4ebe8;
         position: relative;
         z-index: 10;
@@ -163,7 +175,7 @@
         background: #ffffff;
         padding: 25px;
         border-radius: 20px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
         border: 1px solid #e4ebe8;
         position: relative;
         z-index: 10;
@@ -218,7 +230,9 @@
 <div id="petalsContainer"></div>
 
 <!-- BANNER -->
-<div class="banner reveal"></div>
+<div class="banner reveal">
+    <div class="banner-title">Nhóm 2 Không Ai Làm Lại</div>
+</div>
 
 <!-- TEAM -->
 <h2 class="reveal">🌿 Thành viên nhóm</h2>
@@ -248,23 +262,23 @@
 
 <!-- LESSONS -->
 <h2>📘 Danh sách bài học 📘</h2>
-    <div class="lessons">
-		<a href="https://www.canva.com/design/DAG46v0RKGQ/tAeFDjjk-isrha8G9a8S-g/edit?utm_content=DAG46v0RKGQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="card">
-			<h3>Bài học 8</h3>
-		</a>
-		<a href="https://www.canva.com/design/DAG47OSZ0bw/zbXpq9cTSGlu8npKBNaAdw/edit?utm_content=DAG47OSZ0bw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="card">
-			<h3>Bài học 9</h3>
-		</a>
-		<a href="https://www.canva.com/design/DAG49_jETwQ/b9DkS1UAzdvgnH4VgKjKzw/edit?utm_content=DAG49_jETwQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="card">
-			<h3>Bài học 10</h3>
-		</a>
-		<a href="https://example.com/baihoc4" class="card">
-			<h3>Bài học 11</h3>
-		</a>
-		<a href="https://example.com/baihoc5" class="card">
-			<h3>Bài học 12</h3>
-		</a>
-	</div>
+<div class="lessons">
+    <a href="https://www.canva.com/design/DAG46v0RKGQ/tAeFDjjk-isrha8G9a8S-g/edit?utm_content=DAG46v0RKGQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="card">
+        <h3>Bài học 8</h3>
+    </a>
+    <a href="https://www.canva.com/design/DAG47OSZ0bw/zbXpq9cTSGlu8npKBNaAdw/edit?utm_content=DAG47OSZ0bw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="card">
+        <h3>Bài học 9</h3>
+    </a>
+    <a href="https://www.canva.com/design/DAG49_jETwQ/b9DkS1UAzdvgnH4VgKjKzw/edit?utm_content=DAG49_jETwQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="card">
+        <h3>Bài học 10</h3>
+    </a>
+    <a href="https://example.com/baihoc4" class="card">
+        <h3>Bài học 11</h3>
+    </a>
+    <a href="https://example.com/baihoc5" class="card">
+        <h3>Bài học 12</h3>
+    </a>
+</div>
 
 <!-- FORM -->
 <h2 class="reveal">📩 Gửi lời nhắn</h2>
@@ -277,7 +291,21 @@
         <button type="submit">Gửi</button>
     </form>
 </div>
-
+<!-- CONTACT INFO -->
+<div class="contact-info">
+    <div class="contact-item">
+        <h3>Email</h3>
+        <p><a href="bruhiambeluga@gmail.com">bruhiambeluga@gmail.com</a></p>
+    </div>
+    <div class="contact-item">
+        <h3>Điện thoại</h3>
+        <p><a href="tel:0961247340">0961247340</a></p>
+    </div>
+    <div class="contact-item">
+        <h3>Địa chỉ</h3>
+        <p>601C Nguyễn Văn Trung Phú Khương Thành Phố Bến Tre</p>
+    </div>
+</div>
 <footer>🌸 Nhóm Tin Học 2-2025 🌸</footer>
 
 <script>
@@ -310,12 +338,11 @@ function createPetal() {
     setTimeout(() => petal.remove(), duration * 1000);
 }
 
-setInterval(createPetal, 250); // nhiều cánh hơn
+setInterval(createPetal, 250); // many petals
 </script>
 
 </body>
 </html>
-
 
 
 
