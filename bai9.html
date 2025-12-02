@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách và Bảng trong HTML</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            color: #333;
+        }
+        .example {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-left: 5px solid #4CAF50;
+            margin-bottom: 20px;
+            font-family: 'Courier New', monospace;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Danh Sách và Bảng trong HTML</h1>
+    </header>
+
+    <div class="container">
+        <h2>1. Danh Sách (List)</h2>
+
+        <p>Có hai loại danh sách trong HTML: <strong>Danh sách không có thứ tự (Unordered List)</strong> và <strong>Danh sách có thứ tự (Ordered List)</strong>.</p>
+
+        <div class="example">
+            <h3>Ví dụ 1: Danh Sách Không Có Thứ Tự (Unordered List)</h3>
+            <div class="code-box">
+                <code>
+<ul><br>
+    <li>Chèo thuyền</li><br>
+    <li>Đi bộ</li><br>
+    <li>Đạp xe</li><br>
+</ul>
+                </code>
+            </div>
+            <ul>
+                <li>Chèo thuyền</li>
+                <li>Đi bộ</li>
+                <li>Đạp xe</li>
+            </ul>
+        </div>
+
+        <div class="example">
+            <h3>Ví dụ 2: Danh Sách Có Thứ Tự (Ordered List)</h3>
+            <div class="code-box">
+                <code>
+<ol><br>
+    <li>Đầu tiên</li><br>
+    <li>Thứ hai</li><br>
+    <li>Thứ ba</li><br>
+</ol>
+                </code>
+            </div>
+            <ol>
+                <li>Đầu tiên</li>
+                <li>Thứ hai</li>
+                <li>Thứ ba</li>
+            </ol>
+        </div>
+
+        <h2>2. Bảng (Table)</h2>
+
+        <p>Bảng trong HTML được tạo bằng thẻ <code>&lt;table&gt;</code>, các hàng bảng dùng thẻ <code>&lt;tr&gt;</code>, các cột bảng dùng thẻ <code>&lt;th&gt;</code> (để tạo tiêu đề cột) và <code>&lt;td&gt;</code> (để tạo dữ liệu của bảng).</p>
+
+        <div class="example">
+            <h3>Ví dụ 3: Tạo Bảng Dữ Liệu</h3>
+            <div class="code-box">
+                <code>
+<table><br>
+    <tr><br>
+        <th>STT</th><br>
+        <th>Tên</th><br>
+        <th>Điện thoại</th><br>
+    </tr><br>
+    <tr><br>
+        <td>1</td><br>
+        <td>Phan Thanh Hậu</td><br>
+        <td>0901234567</td><br>
+    </tr><br>
+    <tr><br>
+        <td>2</td><br>
+        <td>Phạm Khánh Vân</td><br>
+        <td>0912345678</td><br>
+    </tr><br>
+</table>
+                </code>
+            </div>
+            <table>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên</th>
+                    <th>Điện thoại</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Phan Thanh Hậu</td>
+                    <td>0901234567</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Phạm Khánh Vân</td>
+                    <td>0912345678</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="button-container">
+            <button class="back-button" onclick="window.location.href='index.html';">Quay lại Trang Chủ</button>
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 10px; background-color: #333; color: white;">
+        <p>&copy; 2025 Nhóm 2</p>
+    </footer>
+
+</body>
+</html>
