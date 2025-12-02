@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Định dạng Văn Bản bằng CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            color: #333;
+        }
+        h3 {
+            color: #4CAF50;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .example {
+            background-color: #f0f0f0;
+            border-left: 5px solid #4CAF50;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .card {
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .card h4 {
+            color: #4CAF50;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Định Dạng Văn Bản bằng CSS</h1>
+    </header>
+
+    <div class="container">
+        <h2>1. Định Dạng Màu Sắc và Font Chữ</h2>
+        <p>Với CSS, bạn có thể thay đổi màu sắc và font chữ của văn bản để làm nổi bật hoặc thay đổi phong cách của trang web. Ví dụ dưới đây sẽ minh họa cách thay đổi màu sắc và font chữ:</p>
+
+        <div class="example">
+            <h3>Ví dụ 1: Đổi Màu Sắc và Font Chữ</h3>
+            <pre><code>
+p {
+    color: #FF5733; /* Màu chữ cam */
+    font-family: 'Arial', sans-serif; /* Font chữ Arial */
+}
+            </code></pre>
+            <p style="color: #FF5733; font-family: 'Arial', sans-serif;">Đoạn văn bản này có màu sắc là cam và font chữ là Arial.</p>
+        </div>
+
+        <h2>2. Định Dạng Kích Thước Chữ</h2>
+        <p>CSS cho phép bạn thay đổi kích thước chữ để nội dung dễ đọc hơn và nổi bật hơn. Dưới đây là cách thay đổi kích thước chữ:</p>
+
+        <div class="example">
+            <h3>Ví dụ 2: Đổi Kích Thước Chữ</h3>
+            <pre><code>
+p {
+    font-size: 24px; /* Kích thước chữ 24px */
+}
+            </code></pre>
+            <p style="font-size: 24px;">Đoạn văn bản này có kích thước chữ là 24px.</p>
+        </div>
+
+        <h2>3. Định Dạng Căn Chỉnh Văn Bản</h2>
+        <p>Có thể căn chỉnh văn bản theo nhiều hướng khác nhau: căn trái, căn giữa hoặc căn phải.</p>
+
+        <div class="example">
+            <h3>Ví dụ 3: Căn Chỉnh Văn Bản</h3>
+            <pre><code>
+p {
+    text-align: center; /* Căn giữa văn bản */
+}
+            </code></pre>
+            <p style="text-align: center;">Đoạn văn bản này được căn giữa.</p>
+        </div>
+
+        <h2>4. Định Dạng Khoảng Cách và Line-Height</h2>
+        <p>CSS cũng cho phép bạn điều chỉnh khoảng cách giữa các dòng chữ (line-height) và giữa các đoạn văn bản (margin, padding).</p>
+
+        <div class="example">
+            <h3>Ví dụ 4: Khoảng Cách Dòng và Đoạn Văn</h3>
+            <pre><code>
+p {
+    line-height: 1.8; /* Khoảng cách dòng */
+    margin-bottom: 20px; /* Khoảng cách giữa các đoạn văn */
+}
+            </code></pre>
+            <p style="line-height: 1.8; margin-bottom: 20px;">Đoạn văn bản này có khoảng cách dòng lớn hơn và có khoảng cách giữa các đoạn văn bản.</p>
+        </div>
+
+        <h2>5. Định Dạng Đậm, Nghiêng và Gạch Chân</h2>
+        <p>CSS cho phép bạn làm cho văn bản trở nên đậm, nghiêng hoặc gạch chân để làm nổi bật các phần nội dung quan trọng.</p>
+
+        <div class="example">
+            <h3>Ví dụ 5: Định Dạng Đậm, Nghiêng và Gạch Chân</h3>
+            <pre><code>
+p {
+    font-weight: bold; /* Làm đậm văn bản */
+    font-style: italic; /* Làm nghiêng văn bản */
+    text-decoration: underline; /* Gạch chân văn bản */
+}
+            </code></pre>
+            <p style="font-weight: bold; font-style: italic; text-decoration: underline;">Đoạn văn bản này là đậm, nghiêng và có gạch chân.</p>
+        </div>
+
+        <h2>6. Định Dạng Các Đoạn Danh Sách</h2>
+        <p>CSS cũng cho phép bạn thay đổi cách hiển thị các danh sách (unordered list hoặc ordered list) trên trang web.</p>
+
+        <div class="example">
+            <h3>Ví dụ 6: Định Dạng Danh Sách</h3>
+            <pre><code>
+ul {
+    list-style-type: square; /* Đổi kiểu điểm đầu của danh sách thành hình vuông */
+    margin-left: 20px; /* Khoảng cách bên trái danh sách */
+}
+            </code></pre>
+            <ul style="list-style-type: square; margin-left: 20px;">
+                <li>Điểm 1</li>
+                <li>Điểm 2</li>
+                <li>Điểm 3</li>
+            </ul>
+        </div>
+
+        <div class="button-container">
+            <button class="back-button" onclick="window.location.href='index.html';">Quay lại Trang Chủ</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Nhóm 2</p>
+    </footer>
+
+</body>
+</html>
