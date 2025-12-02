@@ -65,7 +65,30 @@
         position: relative;
         z-index: 10;
     }
+.banner-title{
+          position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+          font-family:'Quicksand',sans-serif;font-size:60px;font-weight:700;
+          color:#F37021;background:rgba(255,255,255,0.25);
+          padding:12px 30px;border-radius:10px;backdrop-filter:blur(2px);letter-spacing:3px;
+          animation: neon 2s infinite alternate, bounce 1.2s ease-in-out infinite;
+        }
+        @keyframes neon{
+          0%{text-shadow:0 0 5px #fff,0 0 10px #f37021,0 0 20px #f37021;}
+          50%{text-shadow:0 0 10px #fff,0 0 20px #ff9933,0 0 30px #f37021;}
+          100%{text-shadow:0 0 5px #fff,0 0 10px #ff6600,0 0 20px #f37021;}
+        }
+        @keyframes bounce{
+          0%,100%{transform:translate(-50%,-50%) translateY(0);}
+          50%{transform:translate(-50%,-50%) translateY(-10px);}
+        }
+    </style>
+</head>
+<body>
 
+<!-- Banner -->
+<div class="banner">
+    <div class="banner-title">Nhóm 2 Không Ai Làm Lại</div>
+</div>
     /* TEAM */
     .team {
         display: flex;
@@ -296,6 +319,7 @@ setInterval(createPetal, 250); // nhiều cánh hơn
 
 </body>
 </html>
+
 
 
 
