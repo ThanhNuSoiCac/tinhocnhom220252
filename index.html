@@ -61,26 +61,14 @@
         left: 50%;
         transform: translate(-50%, -50%);
         font-family: 'Quicksand', sans-serif;
-        font-size: 60px;
+        font-size: 50px;
         font-weight: 700;
-        color: #F37021;
-        background: rgba(255, 255, 255, 0.25);
-        padding: 12px 30px;
+        color: #ffffff; /* Changed text color to white */
+        background: rgba(0, 0, 0, 0.4); /* Added a darker background to improve visibility */
+        padding: 15px 30px;
         border-radius: 10px;
         backdrop-filter: blur(2px);
-        letter-spacing: 3px;
-        animation: neon 2s infinite alternate, bounce 1.2s ease-in-out infinite;
-    }
-
-    @keyframes neon {
-        0% { text-shadow: 0 0 5px #fff, 0 0 10px #f37021, 0 0 20px #f37021; }
-        50% { text-shadow: 0 0 10px #fff, 0 0 20px #ff9933, 0 0 30px #f37021; }
-        100% { text-shadow: 0 0 5px #fff, 0 0 10px #ff6600, 0 0 20px #f37021; }
-    }
-
-    @keyframes bounce {
-        0%, 100% { transform: translate(-50%, -50%) translateY(0); }
-        50% { transform: translate(-50%, -50%) translateY(-10px); }
+        letter-spacing: 2px;
     }
 
     /* HEADINGS */
@@ -291,6 +279,7 @@
         <button type="submit">Gửi</button>
     </form>
 </div>
+
 <!-- Footer -->
 <footer class="footer-news reveal delay-1">
     <div class="footer-container">
@@ -300,7 +289,6 @@
     </div>
     <div class="footer-bottom">© 2025 Nhóm 2 – 12SĐ | CẢM ƠN BẠN ĐÃ GHÉ QUA🌸</div>
 </footer>
-
 
 <script>
 /* REVEAL on scroll */
