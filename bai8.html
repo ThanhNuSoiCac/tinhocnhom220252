@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Định Dạng Văn Bản với CSS</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            color: #333;
+        }
+        .example {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-left: 5px solid #4CAF50;
+            margin-bottom: 20px;
+            font-family: 'Courier New', monospace;
+        }
+        .code-box {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin-top: 10px;
+            overflow-x: auto;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Định Dạng Văn Bản với CSS</h1>
+    </header>
+
+    <div class="container">
+        <h2>1. Định Dạng Màu Sắc Văn Bản</h2>
+        <p>Với CSS, bạn có thể thay đổi màu sắc của văn bản bằng thuộc tính <code>color</code>. Ví dụ dưới đây thay đổi màu của văn bản thành màu đỏ:</p>
+
+        <div class="example">
+            <h3>Ví dụ: Đổi Màu Sắc Văn Bản</h3>
+            <div class="code-box">
+                <code>
+p {<br>
+    color: red;<br>
+}
+                </code>
+            </div>
+            <p style="color: red;">Đoạn văn bản này có màu chữ là đỏ.</p>
+        </div>
+
+        <h2>2. Định Dạng Font Chữ</h2>
+        <p>CSS cho phép bạn thay đổi font chữ của văn bản bằng thuộc tính <code>font-family</code>. Ví dụ dưới đây thay đổi font chữ của văn bản thành Arial:</p>
+
+        <div class="example">
+            <h3>Ví dụ: Đổi Font Chữ</h3>
+            <div class="code-box">
+                <code>
+p {<br>
+    font-family: Arial, sans-serif;<br>
+}
+                </code>
+            </div>
+            <p style="font-family: Arial, sans-serif;">Đoạn văn bản này sử dụng font chữ Arial.</p>
+        </div>
+
+        <h2>3. Định Dạng Kích Thước Chữ</h2>
+        <p>Có thể thay đổi kích thước chữ bằng thuộc tính <code>font-size</code>. Dưới đây là ví dụ thay đổi kích thước chữ:</p>
+
+        <div class="example">
+            <h3>Ví dụ: Đổi Kích Thước Chữ</h3>
+            <div class="code-box">
+                <code>
+p {<br>
+    font-size: 24px;<br>
+}
+                </code>
+            </div>
+            <p style="font-size: 24px;">Đoạn văn bản này có kích thước chữ là 24px.</p>
+        </div>
+
+        <h2>4. Căn Chỉnh Văn Bản</h2>
+        <p>Có thể căn chỉnh văn bản theo nhiều kiểu khác nhau: căn trái, căn giữa, hoặc căn phải bằng thuộc tính <code>text-align</code>.</p>
+
+        <div class="example">
+            <h3>Ví dụ: Căn Chỉnh Văn Bản</h3>
+            <div class="code-box">
+                <code>
+p {<br>
+    text-align: center;<br>
+}
+                </code>
+            </div>
+            <p style="text-align: center;">Đoạn văn bản này được căn giữa.</p>
+        </div>
+
+        <h2>5. Định Dạng Đậm, Nghiêng và Gạch Chân</h2>
+        <p>CSS cũng cho phép bạn làm cho văn bản trở nên đậm, nghiêng hoặc gạch chân. Dưới đây là ví dụ áp dụng các thuộc tính này:</p>
+
+        <div class="example">
+            <h3>Ví dụ: Định Dạng Đậm, Nghiêng và Gạch Chân</h3>
+            <div class="code-box">
+                <code>
+p {<br>
+    font-weight: bold;<br>
+    font-style: italic;<br>
+    text-decoration: underline;<br>
+}
+                </code>
+            </div>
+            <p style="font-weight: bold; font-style: italic; text-decoration: underline;">Đoạn văn bản này có kiểu chữ đậm, nghiêng và có gạch chân.</p>
+        </div>
+
+        <h2>6. Khoảng Cách Giữa Các Dòng</h2>
+        <p>Với thuộc tính <code>line-height</code>, bạn có thể điều chỉnh khoảng cách giữa các dòng chữ. Điều này rất hữu ích khi bạn muốn văn bản dễ đọc hơn.</p>
+
+        <div class="example">
+            <h3>Ví dụ: Khoảng Cách Dòng</h3>
+            <div class="code-box">
+                <code>
+p {<br>
+    line-height: 1.8;<br>
+}
+                </code>
+            </div>
+            <p style="line-height: 1.8;">Đoạn văn bản này có khoảng cách giữa các dòng chữ là 1.8.</p>
+        </div>
+
+        <div class="button-container">
+            <button class="back-button" onclick="window.location.href='index.html';">Quay lại Trang Chủ</button>
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 10px; background-color: #333; color: white;">
+        <p>&copy; 2025 Nhóm 2</p>
+    </footer>
+
+</body>
+</html>
