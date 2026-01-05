@@ -110,6 +110,64 @@
 
         </form>
     </div>
+ <!-- LUYỆN TẬP -->
+    <h2>Luyện tập</h2>
+
+    <h3>* Phần tử Form</h3>
+
+    <p><strong>Form cơ bản:</strong> Ví dụ một biểu mẫu đăng ký tài khoản.</p>
+    <div class="example">
+&lt;form action="/register" method="post"&gt;
+  &lt;!-- Các phần tử input và nút gửi dữ liệu sẽ được thêm vào đây --&gt;
+&lt;/form&gt;
+    </div>
+
+    <p><strong>Form có phần tử select:</strong> Ví dụ form chọn quốc gia.</p>
+    <div class="example">
+&lt;form&gt;
+  &lt;label for="country"&gt;Quốc gia:&lt;/label&gt;
+  &lt;select id="country" name="country"&gt;
+    &lt;option value="vietnam"&gt;Việt Nam&lt;/option&gt;
+    &lt;option value="usa"&gt;United States&lt;/option&gt;
+    &lt;option value="uk"&gt;United Kingdom&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/form&gt;
+    </div>
+
+    <p><strong>Form với textarea:</strong> Ô nhập ý kiến hoặc phản hồi.</p>
+    <div class="example">
+&lt;form&gt;
+  &lt;label for="feedback"&gt;Phản hồi:&lt;/label&gt;
+  &lt;textarea id="feedback" name="feedback" rows="4" cols="50"&gt;&lt;/textarea&gt;
+&lt;/form&gt;
+    </div>
+
+    <h3>* Phần tử Input</h3>
+
+    <p><strong>Input kiểu text:</strong> Ô nhập tên người dùng.</p>
+    <div class="example">
+&lt;form&gt;
+  &lt;label for="username"&gt;Tên người dùng:&lt;/label&gt;
+  &lt;input type="text" id="username" name="username"&gt;
+&lt;/form&gt;
+    </div>
+
+    <p><strong>Input kiểu email:</strong> Ô nhập địa chỉ email.</p>
+    <div class="example">
+&lt;form&gt;
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email"&gt;
+&lt;/form&gt;
+    </div>
+
+    <p><strong>Input kiểu date:</strong> Ô chọn ngày sinh.</p>
+    <div class="example">
+&lt;form&gt;
+  &lt;label for="birthdate"&gt;Ngày sinh:&lt;/label&gt;
+  &lt;input type="date" id="birthdate" name="birthdate"&gt;
+&lt;/form&gt;
+    </div>
 
 </body>
 </html>
+
