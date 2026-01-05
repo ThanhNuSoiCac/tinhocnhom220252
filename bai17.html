@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BÀI 17 – Tin học 12</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f5;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #ffffff;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #16a085;
+            margin-top: 15px;
+        }
+
+        p {
+            margin: 6px 0;
+        }
+
+        .answer {
+            background-color: #f9fbfc;
+            border-left: 5px solid #3498db;
+            padding: 12px 15px;
+            margin-top: 10px;
+            border-radius: 6px;
+        }
+
+        .code-box {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: Consolas, monospace;
+            font-size: 14px;
+            border-radius: 6px;
+        }
+
+        .demo {
+            background-color: #fffbe6;
+            padding: 10px;
+            border: 1px dashed #f1c40f;
+            margin: 10px 0;
+            border-radius: 6px;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>BÀI 17</h1>
+
+    <!-- Luyện tập 1 -->
+    <h2>Luyện tập 1 trang 101 – Tin học 12</h2>
+    <p><strong>Giải thích sự khác nhau giữa hai định dạng sau:</strong></p>
+
+    <div class="code-box">
+        #p123 + p { color: red; } <br>
+        h2#p123 + p { color: red; }
+    </div>
+
+    <h3>Lời giải</h3>
+    <div class="answer">
+        <p>
+            Hai định dạng CSS trên khác nhau ở <strong>phần tử được chọn</strong> để áp dụng kiểu.
+        </p>
+
+        <p><strong>1. #p123 + p</strong></p>
+        <p>
+            Chọn phần tử <strong>p</strong> là anh em liền kề ngay sau
+            <strong>bất kỳ phần tử nào</strong> có id = "p123".
+        </p>
+
+        <div class="demo">
+            <div id="p123"></div>
+            <p>Đoạn p được áp dụng màu đỏ</p>
+            <p>Đoạn p không bị ảnh hưởng</p>
+        </div>
+
+        <p><strong>2. h2#p123 + p</strong></p>
+        <p>
+            Chỉ chọn phần tử <strong>p</strong> là anh em liền kề ngay sau
+            <strong>thẻ h2 có id = "p123"</strong>.
+        </p>
+
+        <div class="demo">
+            <h2 id="p123">Tiêu đề</h2>
+            <p>Đoạn p được áp dụng màu đỏ</p>
+            <p>Đoạn p không bị ảnh hưởng</p>
+        </div>
+    </div>
+
+    <!-- Luyện tập 2 -->
+    <h2>Luyện tập 2 trang 101 – Tin học 12</h2>
+    <p>
+        Trong phần Thực hành, các tên riêng cần được in nghiêng và đóng khung.
+    </p>
+
+    <h3>Lời giải</h3>
+    <div class="answer">
+        <div class="code-box">
+            .name { <br>
+            &nbsp;&nbsp;font-style: italic; <br>
+            &nbsp;&nbsp;border: 1px solid #000; <br>
+            &nbsp;&nbsp;padding: 2px; <br>
+            &nbsp;&nbsp;display: inline-block; <br>
+            }
+        </div>
+    </div>
+
+    <!-- Vận dụng 1 -->
+    <h2>Vận dụng 1 trang 101 – Tin học 12</h2>
+    <p>
+        Tìm hiểu các dạng pseudo-class khác, nêu ý nghĩa và ví dụ.
+    </p>
+
+    <h3>Lời giải</h3>
+    <div class="answer">
+        <ul>
+            <li><strong>:hover</strong> – Kích hoạt khi rê chuột lên phần tử.</li>
+            <li><strong>:active</strong> – Kích hoạt khi phần tử đang được nhấn.</li>
+            <li><strong>:focus</strong> – Kích hoạt khi phần tử được chọn (focus).</li>
+            <li><strong>:nth-child()</strong> – Chọn phần tử con theo vị trí.</li>
+        </ul>
+    </div>
+
+    <!-- Vận dụng 2 -->
+    <h2>Vận dụng 2 trang 101 – Tin học 12</h2>
+    <p>
+        Tìm hiểu các dạng pseudo-element, nêu ý nghĩa và ví dụ.
+    </p>
+
+    <h3>Lời giải</h3>
+    <div class="answer">
+        <ul>
+            <li><strong>::before</strong> – Chèn nội dung phía trước phần tử.</li>
+            <li><strong>::after</strong> – Chèn nội dung phía sau phần tử.</li>
+            <li><strong>::first-line</strong> – Định dạng dòng đầu tiên của văn bản.</li>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>
