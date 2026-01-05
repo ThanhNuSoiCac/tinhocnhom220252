@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BÀI 16 – Tin học 12</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f7;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #16a085;
+            margin-top: 15px;
+        }
+
+        p {
+            margin: 6px 0;
+        }
+
+        .answer {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 12px;
+            margin-top: 10px;
+        }
+
+        .code-box {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: Consolas, monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>BÀI 16</h1>
+
+    <!-- Luyện tập 1 -->
+    <h2>Luyện tập 1 trang 95 – Tin học 12</h2>
+    <p><strong>Phần tử HTML có thể ẩn đi trên trang web được không? Nếu có thì dùng lệnh CSS gì?</strong></p>
+
+    <h3>Lời giải</h3>
+    <div class="answer">
+        <p>Có, phần tử HTML có thể được ẩn đi trên trang web bằng cách sử dụng thuộc tính CSS:</p>
+        <div class="code-box">
+            display: none;
+        </div>
+    </div>
+
+    <!-- Luyện tập 2 -->
+    <h2>Luyện tập 2 trang 95 – Tin học 12</h2>
+    <p><strong>Hãy giải thích ý nghĩa định dạng sau:</strong></p>
+
+    <div class="code-box">
+        .test .test_more { background-color: red; }
+    </div>
+
+    <h3>Lời giải</h3>
+    <div class="answer">
+        <p><strong>Ý nghĩa:</strong></p>
+        <p>
+            <strong>.test .test_more</strong> là bộ chọn hậu duệ (descendant selector),
+            áp dụng cho các phần tử có lớp <em>test_more</em> nằm bên trong phần tử có lớp <em>test</em>.
+        </p>
+        <p>
+            <strong>background-color: red;</strong> dùng để đặt màu nền của các phần tử được chọn là màu đỏ.
+        </p>
+    </div>
+
+    <!-- Vận dụng 1 -->
+    <h2>Vận dụng 1 trang 95 – Tin học 12</h2>
+    <p>
+        Giả sử trang web có nhiều thẻ <strong>p</strong>, trong đó P1 quan trọng nhất,
+        P2 và P3 có cùng kiểu, các đoạn còn lại giống nhau.
+    </p>
+
+    <h3>Lời giải</h3>
+    <div class="answer">
+        <p><strong>Có thể thực hiện như sau:</strong></p>
+        <p>– Gắn một lớp riêng cho P1:</p>
+        <div class="code-box">
+            &lt;p class="important"&gt;Đoạn P1&lt;/p&gt;
+        </div>
+
+        <p>– Gắn cùng một lớp cho P2 và P3:</p>
+        <div class="code-box">
+            &lt;p class="normal"&gt;Đoạn P2&lt;/p&gt;<br>
+            &lt;p class="normal"&gt;Đoạn P3&lt;/p&gt;
+        </div>
+
+        <p>– Sử dụng CSS để định dạng các lớp tương ứng.</p>
+    </div>
+
+    <!-- Vận dụng 2 -->
+    <h2>Vận dụng 2 trang 95 – Tin học 12</h2>
+    <p>
+        Có thể thiết lập định dạng cho các khung với viền trên, dưới, trái, phải khác nhau hay không?
+    </p>
+
+    <h3>Lời giải</h3>
+    <div class="answer">
+        <p>
+            Có, có thể thiết lập viền khác nhau cho từng cạnh của khung
+            bằng các thuộc tính CSS <strong>border</strong>.
+        </p>
+
+        <div class="code-box">
+            div {<br>
+            &nbsp;&nbsp;border-top: 1px solid red;<br>
+            &nbsp;&nbsp;border-bottom: 2px dashed blue;<br>
+            &nbsp;&nbsp;border-left: 3px dotted green;<br>
+            &nbsp;&nbsp;border-right: 4px double purple;<br>
+            }
+        </div>
+
+        <p>
+            Trong ví dụ trên, mỗi cạnh của khung <strong>div</strong> có kiểu viền,
+            độ dày và màu sắc khác nhau.
+        </p>
+    </div>
+
+</div>
+</body>
+</html>
