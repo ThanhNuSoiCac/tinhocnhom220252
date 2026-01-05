@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BÀI 18 – Tin học 12</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef1f5;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #16a085;
+            margin-top: 15px;
+        }
+
+        p {
+            margin: 6px 0;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        .answer {
+            background-color: #f9fbfd;
+            border-left: 5px solid #3498db;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 6px;
+        }
+
+        .code-box {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 12px;
+            margin: 10px 0;
+            font-family: Consolas, monospace;
+            font-size: 14px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>BÀI 18</h1>
+
+    <!-- Luyện tập 1 -->
+    <h2>Luyện tập 1 trang 105 – Tin học 12</h2>
+    <p>
+        Tạo trang <strong>dang_ki.html</strong> chứa biểu mẫu đăng kí câu lạc bộ và bổ sung liên kết
+        tới trang dang_ki trong phần cuối trang của tất cả các trang.
+    </p>
+
+    <h3>Lời giải</h3>
+    <div class="answer">
+        <ul>
+            <li>Tạo tệp HTML mới và đặt tên là <strong>dang_ki.html</strong>.</li>
+            <li>
+                Trong tệp này, tạo biểu mẫu đăng kí câu lạc bộ bằng các thẻ
+                <strong>&lt;form&gt;</strong>, <strong>&lt;input&gt;</strong>, <strong>&lt;button&gt;</strong>.
+            </li>
+            <li>Thêm CSS để định dạng giao diện biểu mẫu cho đẹp và dễ sử dụng.</li>
+            <li>
+                Ở phần cuối trang của tất cả các trang trong website,
+                thêm liên kết dẫn tới trang <strong>dang_ki.html</strong>.
+            </li>
+        </ul>
+    </div>
+
+    <!-- Luyện tập 2 -->
+    <h2>Luyện tập 2 trang 105 – Tin học 12</h2>
+    <p>
+        Thay đổi định dạng và màu sắc của phông chữ khi di chuyển chuột qua.
+    </p>
+
+    <h3>Lời giải</h3>
+    <div class="answer">
+        <p>Có thể sử dụng hiệu ứng <strong>:hover</strong> trong CSS.</p>
+
+        <div class="code-box">
+            .vung { <br>
+            &nbsp;&nbsp;font-family: Arial, sans-serif; <br>
+            &nbsp;&nbsp;font-size: 14px; <br>
+            &nbsp;&nbsp;color: #333; <br>
+            } <br><br>
+
+            .vung:hover { <br>
+            &nbsp;&nbsp;font-size: 16px; <br>
+            &nbsp;&nbsp;color: red; <br>
+            &nbsp;&nbsp;font-weight: bold; <br>
+            }
+        </div>
+    </div>
+
+    <!-- Vận dụng -->
+    <h2>Vận dụng trang 105 – Tin học 12</h2>
+    <p>
+        Đưa ra một thiết kế khác cho website đã tạo ở phần Thực hành
+        và chuyển toàn bộ website sang định dạng mới.
+    </p>
+
+    <h3>Lời giải</h3>
+    <div class="answer">
+        <ul>
+            <li>Tạo một tệp CSS mới, ví dụ: <strong>style.css</strong>.</li>
+            <li>Viết các quy tắc CSS theo thiết kế mới.</li>
+            <li>Liên kết tệp CSS mới vào tất cả các trang của website.</li>
+        </ul>
+
+        <p><strong>Ví dụ định dạng CSS:</strong></p>
+
+        <div class="code-box">
+            /* Banner */ <br>
+            .banner { <br>
+            &nbsp;&nbsp;background: url("../assets/img/bg-masthead.jpg") no-repeat center; <br>
+            &nbsp;&nbsp;background-size: cover; <br>
+            &nbsp;&nbsp;padding: 12rem 0; <br>
+            &nbsp;&nbsp;text-align: center; <br>
+            &nbsp;&nbsp;color: darkred; <br>
+            } <br><br>
+
+            .banner h2 { <br>
+            &nbsp;&nbsp;font-size: 36px; <br>
+            &nbsp;&nbsp;font-weight: bold; <br>
+            } <br><br>
+
+            /* Slogan */ <br>
+            .slogan { <br>
+            &nbsp;&nbsp;background-color: #f8f9fa; <br>
+            &nbsp;&nbsp;text-align: center; <br>
+            &nbsp;&nbsp;padding: 7rem 3rem; <br>
+            } <br><br>
+
+            .row { <br>
+            &nbsp;&nbsp;display: flex; <br>
+            &nbsp;&nbsp;flex-wrap: wrap; <br>
+            } <br><br>
+
+            .block_3 { <br>
+            &nbsp;&nbsp;flex: 0 0 33.33%; <br>
+            } <br><br>
+
+            .block_3 h3 { <br>
+            &nbsp;&nbsp;font-size: 24px; <br>
+            &nbsp;&nbsp;font-weight: bold; <br>
+            } <br><br>
+
+            .text-content { <br>
+            &nbsp;&nbsp;font-size: 16px; <br>
+            &nbsp;&nbsp;color: #333; <br>
+            }
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
