@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BÀI 15 – Tin học 12</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .color-list p {
+            margin: 4px 0;
+        }
+
+        .color-box {
+            width: 90px;
+            height: 90px;
+            display: inline-block;
+            margin: 8px;
+            border: 1px solid #333;
+            border-radius: 6px;
+        }
+
+        .example-box {
+            background: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 12px;
+            margin: 10px 0;
+            font-family: Consolas, monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>BÀI 15</h1>
+
+    <!-- Luyện tập 1 -->
+    <div class="section">
+        <h2>Luyện tập 1 trang 88 – Tin học 12</h2>
+        <p><strong>Thiết lập hệ màu cơ bản (17 màu của CSS2.1) theo bộ ba RGB</strong></p>
+
+        <h3>Lời giải</h3>
+        <div class="color-list">
+            <p>Đen: RGB(0, 0, 0)</p>
+            <p>Trắng: RGB(255, 255, 255)</p>
+            <p>Đỏ: RGB(255, 0, 0)</p>
+            <p>Xanh lá cây: RGB(0, 128, 0)</p>
+            <p>Xanh da trời: RGB(0, 0, 255)</p>
+            <p>Xanh lam: RGB(0, 0, 128)</p>
+            <p>Vàng: RGB(255, 255, 0)</p>
+            <p>Cam: RGB(255, 165, 0)</p>
+            <p>Hồng: RGB(255, 192, 203)</p>
+            <p>Tím: RGB(128, 0, 128)</p>
+            <p>Xanh dương: RGB(0, 0, 139)</p>
+            <p>Xám: RGB(128, 128, 128)</p>
+            <p>Xám đậm: RGB(169, 169, 169)</p>
+            <p>Xám nhạt: RGB(211, 211, 211)</p>
+            <p>Nâu: RGB(165, 42, 42)</p>
+            <p>Xanh oliv: RGB(128, 128, 0)</p>
+            <p>Xanh lá cây đậm: RGB(0, 100, 0)</p>
+        </div>
+
+        <h3>Mẫu màu minh họa</h3>
+        <div class="color-box" style="background: rgb(0,0,0);"></div>
+        <div class="color-box" style="background: rgb(255,0,0);"></div>
+        <div class="color-box" style="background: rgb(0,128,0);"></div>
+        <div class="color-box" style="background: rgb(0,0,255);"></div>
+        <div class="color-box" style="background: rgb(255,255,0);"></div>
+    </div>
+
+    <!-- Vận dụng 1 -->
+    <div class="section">
+        <h2>Vận dụng 1 trang 88</h2>
+
+        <p><strong>E1 E2 E3</strong></p>
+        <p>
+            Là bộ chọn hậu duệ (descendant selector), áp dụng cho phần tử E3 nằm bên trong E2
+            và E2 nằm trong E1 (không cần trực tiếp).
+        </p>
+
+        <div class="example-box">
+&lt;ul class="parent"&gt;<br>
+&nbsp;&nbsp;&lt;li class="child"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Item 1&lt;/span&gt;<br>
+&nbsp;&nbsp;&lt;/li&gt;<br>
+&lt;/ul&gt;
+        </div>
+
+        <p><strong>E1 &gt; E2 &gt; E3</strong></p>
+        <p>
+            Là bộ chọn con trực tiếp (child combinator), chỉ áp dụng khi E3 là con trực tiếp của E2
+            và E2 là con trực tiếp của E1.
+        </p>
+    </div>
+
+    <!-- Vận dụng 2 -->
+    <div class="section">
+        <h2>Vận dụng 2 trang 88</h2>
+
+        <p><strong>a) E + F + G</strong></p>
+        <p>
+            Là bộ chọn anh em liền kề (adjacent sibling), áp dụng cho G đứng ngay sau F
+            và F đứng ngay sau E.
+        </p>
+
+        <div class="example-box">
+&lt;h2&gt;Tiêu đề&lt;/h2&gt;<br>
+&lt;p&gt;Đoạn 1&lt;/p&gt;<br>
+&lt;p&gt;Đoạn 2&lt;/p&gt;
+        </div>
+
+        <p><strong>b) E &gt; F + G</strong></p>
+        <p>
+            Kết hợp bộ chọn con trực tiếp và anh em liền kề.
+            Áp dụng cho G là anh em kế tiếp của F, và F là con trực tiếp của E.
+        </p>
+    </div>
+
+</div>
+</body>
+</html>
