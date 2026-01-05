@@ -7,76 +7,183 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #e8f5e9, #f4f4f4);
             margin: 0;
             padding: 0;
         }
+
         header {
             background-color: #4CAF50;
             color: white;
             text-align: center;
-            padding: 20px 0;
+            padding: 25px 0;
         }
+
         .container {
-            width: 80%;
-            margin: 50px auto;
-            padding: 20px;
+            width: 85%;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 25px;
             background-color: white;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
         }
+
+        h1 {
+            color: #2e7d32;
+            text-align: center;
+        }
+
         h2 {
+            color: #388e3c;
+            margin-top: 30px;
+            border-left: 5px solid #4CAF50;
+            padding-left: 10px;
+        }
+
+        p {
+            line-height: 1.6;
             color: #333;
         }
+
+        ul {
+            margin-left: 25px;
+        }
+
+        ul li {
+            margin: 8px 0;
+        }
+
+        a {
+            color: #2e7d32;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
+            margin-top: 15px;
         }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
+
         th, td {
             padding: 12px;
-            text-align: left;
+            border: 1px solid #ddd;
         }
+
         th {
             background-color: #4CAF50;
             color: white;
+            text-align: center;
         }
+
         td {
             background-color: #f9f9f9;
         }
+
         .button-container {
-            margin-top: 20px;
             text-align: center;
+            margin-top: 20px;
         }
+
         .back-button {
-            padding: 10px 20px;
+            padding: 12px 25px;
             background-color: #4CAF50;
             color: white;
             border: none;
-            border-radius: 4px;
+            border-radius: 25px;
             cursor: pointer;
             font-size: 16px;
+            transition: 0.3s;
         }
+
         .back-button:hover {
-            background-color: #45a049;
+            background-color: #388e3c;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Trang Quay Lại</h1>
-    </header>
+<header>
+    <h1>Trang Quay Lại</h1>
+</header>
 
-    <div class="container">
-        <!-- Nút quay lại -->
-        <div class="button-container">
-            <button class="back-button" onclick="window.location.href='index.html';">Quay lại trang Index</button>
-        </div>
+<div class="container">
+
+    <div class="button-container">
+        <button class="back-button" onclick="window.location.href='index.html';">
+            ⬅ Quay lại trang Index
+        </button>
     </div>
+
+    <h2>Luyện tập 1</h2>
+
+    <h1>Giới thiệu bản thân</h1>
+
+    <p>Xin chào! Tôi là <strong>Phan Thanh Hậu</strong>, đây là một trang web giới thiệu về bản thân tôi.</p>
+
+    <h2>Bạn cùng lớp</h2>
+
+    <ul>
+        <li><a href="https://www.facebook.com/dkhvmh" target="_blank">Facebook của Bạn 1</a></li>
+        <li><a href="https://www.facebook.com/entieeeeee" target="_blank">Facebook của Bạn 2</a></li>
+        <li><a href="https://www.facebook.com/ongoc.19162" target="_blank">Facebook của Bạn 3</a></li>
+    </ul>
+
+    <p>Cảm ơn bạn đã ghé thăm! 😊</p>
+
+    <h2>Vận dụng</h2>
+
+    <h1>Lịch hoạt động công tác CLB thể thao</h1>
+
+    <table>
+        <tr>
+            <th>Tên câu lạc bộ</th>
+            <th>Lịch hoạt động</th>
+        </tr>
+        <tr>
+            <td><a href="#club1">Câu lạc bộ A</a></td>
+            <td>Thứ Hai, Thứ Tư, Thứ Sáu — 18:00 đến 20:00</td>
+        </tr>
+        <tr>
+            <td><a href="#club2">Câu lạc bộ B</a></td>
+            <td>Thứ Ba, Thứ Năm — 16:00 đến 18:00</td>
+        </tr>
+    </table>
+
+    <h2 id="club1">Câu lạc bộ A</h2>
+    <p>📍 Địa điểm: Sân Bóng XYZ</p>
+    <p>👥 Thành viên: 50</p>
+    <p>🏆 Thành tích: Giải nhất Thể thao X năm 20XX</p>
+    <p>💰 Phí hội viên: 100.000 đồng/tháng</p>
+    <p>📞 Liên hệ: 0123 456 789</p>
+
+    <h2 id="club2">Câu lạc bộ B</h2>
+    <p>📍 Địa điểm: Bể Bơi ABC</p>
+    <p>👥 Thành viên: 30</p>
+    <p>🏅 Thành tích: Huy chương vàng bơi lội Hội thao Y</p>
+    <p>💰 Phí hội viên: 150.000 đồng/tháng</p>
+    <p>📞 Liên hệ: 0987 654 321</p>
+
+</div>
+
+<footer>
+    <p>&copy; 2025 Phan Thanh Hậu</p>
+</footer>
 
 </body>
 </html>
+
